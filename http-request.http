@@ -1,0 +1,34 @@
+###
+POST http://localhost:8080/todos
+Content-Type: application/json
+
+{
+  "title": "Title 1",
+  "description": "Description 1",
+  "dueDate": "2026-01-01T00:00:00Z",
+  "priority": "LOW"
+}
+
+
+###
+@id =1
+GET http://localhost:8080/todos/{{id}}/history
+
+
+###
+DELETE http://localhost:8080/todos/{{id}}
+Content-Type: application/json
+
+
+###
+PUT http://localhost:8080/todos/2
+Content-Type: application/json
+
+{
+  "title": "UPD Title 90",
+  "description": "Description 1",
+  "dueDate": "",
+  "priority": "LOW"
+}
+
+###
