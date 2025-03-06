@@ -12,7 +12,7 @@ import xyz.gvital.todo.model.Todo;
 import xyz.gvital.todo.repository.TodoRepository;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class TodoService {
     private final TodoMapper todoMapper;
 
