@@ -1,7 +1,7 @@
 package xyz.gvital.todo.service;
 
 import jakarta.transaction.Transactional;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import xyz.gvital.todo.dto.TodoCreateDTO;
 import xyz.gvital.todo.dto.TodoResponseDTO;
