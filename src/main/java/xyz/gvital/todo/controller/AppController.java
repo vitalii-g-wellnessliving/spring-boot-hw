@@ -22,7 +22,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/todos")
-public class AppController {
+public class ToDoController {
     private final TodoService todoService;
     private final TaskHistoryService taskHistoryService;
 
