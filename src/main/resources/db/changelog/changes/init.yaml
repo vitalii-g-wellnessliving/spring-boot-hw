@@ -1,0 +1,86 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1741119244991-1
+      author: vital (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: todo_pkey
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: created_at
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: description
+                  type: VARCHAR(255)
+              - column:
+                  name: due_date
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: priority
+                  type: VARCHAR(255)
+              - column:
+                  name: status
+                  type: VARCHAR(255)
+              - column:
+                  name: title
+                  type: VARCHAR(255)
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: user_id
+                  type: BIGINT
+            tableName: todo
+  - changeSet:
+      id: 1741119244991-2
+      author: vital (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: task_history_pkey
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: changed_at
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: changed_by
+                  type: BIGINT
+              - column:
+                  name: new_state
+                  type: VARCHAR(255)
+              - column:
+                  name: old_state
+                  type: VARCHAR(255)
+              - column:
+                  name: todo_id
+                  type: BIGINT
+            tableName: task_history
+  - changeSet:
+      id: 1741119244991-3
+      author: vital (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: todo_id
+            baseTableName: task_history
+            constraintName: fk9l1uchxj0o23g3d7oppj20ovw
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: todo
+            validate: true
+
