@@ -11,5 +11,5 @@ import java.util.List;
 public interface TaskHistoryMapper {
     TaskHistoryResponseDTO toDto(TaskHistory model);
 
-    List<TaskHistoryResponseDTO> toDto(List<TaskHistory> model);
+    TaskHistoryResponseDTO toDto(TaskHistory model);
 }
